@@ -1,0 +1,16 @@
+name: arc-runner-set
+on:
+  workflow_dispatch:
+
+
+  schedule:
+    - cron: '*/5 * * * *' 
+
+jobs:
+  download:
+    runs-on: arc-runner-set
+    steps:
+      - name: Sleep
+        run: |
+          echo "hello"
+          ls
